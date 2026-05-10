@@ -1,94 +1,73 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santhosh V | Portfolio</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f4f7f6; }
-        header { background: #2c3e50; color: #fff; padding: 2rem; text-align: center; border-radius: 8px; }
-        .contact-info { margin-top: 10px; font-size: 0.9rem; }
-        .download-btn { display: inline-block; background: #e74c3c; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 15px; font-weight: bold; }
-        section { background: white; padding: 20px; margin-top: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h2 { border-bottom: 2px solid #2c3e50; padding-bottom: 10px; color: #2c3e50; }
-        .skill-tag { display: inline-block; background: #ecf0f1; padding: 5px 12px; margin: 4px; border-radius: 15px; font-size: 0.85rem; border: 1px solid #bdc3c7; }
-        .project { margin-bottom: 20px; border-left: 4px solid #3498db; padding-left: 15px; }
-        .project-title { font-weight: bold; color: #2980b9; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Santhosh V | Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>SANTHOSH V</h1>
-    <p>B.E. Electronics & Communication Engineering Undergraduate</p>
-    <div class="contact-info">
-        santhoshvijayaragavan07@gmail.com | +91 90431 01809 <br>
-        <a href="https://linkedin.com/in/santhosh0706" style="color: #ecf0f1;">linkedin.com/in/santhosh0706</a>
-    </div>
-    <a href="Santhosh_V_Resume.pdf" class="download-btn" download>Download Full Resume (PDF)</a>
+  <nav>
+    <h1>Santhosh V</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
-<section id="objective">
-    <h2>Career Objective</h2>
-    <p>Electronics Engineering undergraduate (3rd Year) targeting internships in VLSI Design, Embedded Systems, or Core Electronics[cite: 5]. Proficient in HDL coding (Verilog), circuit simulation, and microcontroller programming[cite: 6].</p>
+<section class="hero">
+  <div class="hero-text">
+    <h2>ECE Engineer | VLSI | Embedded Systems</h2>
+    <p>Focused on building real hardware solutions, embedded systems, and chip design future.</p>
+    <a href="#projects" class="btn">View Projects</a>
+  </div>
+  <div class="hero-img">
+    <img src="photo.jpg" alt="Santhosh">
+  </div>
 </section>
 
-<section id="education">
-    <h2>Education</h2>
-    <p><strong>Dhanalakshmi Srinivasan Engineering College, Perambalur</strong> [cite: 16]<br>
-    B.E. Electronics and Communication Engineering (2023-2027) [cite: 13, 16]<br>
-    Current CGPA: 7.69 | 0 Active Backlogs [cite: 14, 15]</p>
+<section id="about">
+  <h2>About Me</h2>
+  <p>3rd Year Electronics & Communication Engineering student passionate about VLSI, Arduino, Embedded Systems and real engineering solutions.</p>
 </section>
 
 <section id="skills">
-    <h2>Technical Skills</h2>
-    <div>
-        <strong>HDL & Hardware:</strong> 
-        <span class="skill-tag">Verilog (Behavioral & Structural)</span> 
-        <span class="skill-tag">NI Multisim</span> [cite: 9]
-    </div>
-    <div>
-        <strong>Programming:</strong> 
-        <span class="skill-tag">C Programming</span> 
-        <span class="skill-tag">Python</span> 
-        <span class="skill-tag">MATLAB</span> [cite: 9, 10]
-    </div>
-    <div>
-        <strong>Core Domains:</strong> 
-        <span class="skill-tag">VLSI Design</span> 
-        <span class="skill-tag">Embedded Systems</span> 
-        <span class="skill-tag">Digital Electronics</span> [cite: 11]
-    </div>
+  <h2>Skills</h2>
+  <div class="grid">
+    <div>Verilog</div>
+    <div>Arduino</div>
+    <div>Python</div>
+    <div>MATLAB</div>
+    <div>ESP8266</div>
+    <div>Linux</div>
+  </div>
 </section>
 
 <section id="projects">
-    <h2>Key Projects</h2>
-    
-    <div class="project">
-        <p class="project-title">Air Gesture Mouse via IP Control (Linux)</p>
-        <p>Built a Python socket-based system to control a PC cursor via smartphone motion data[cite: 21]. Delivered a functional prototype with sub-100ms response[cite: 23].</p>
-    </div>
-
-    <div class="project">
-        <p class="project-title">4-Bit Synchronous Up/Down Counter (Verilog HDL)</p>
-        <p>Implemented a behavioral Verilog model with active-high reset and direction control[cite: 31]. Validated all 16 state transitions via functional simulation[cite: 34].</p>
-    </div>
-
-    <div class="project">
-        <p class="project-title">Smart Weather Monitoring System</p>
-        <p>Interfaced DHT11 and BMP180 sensors with Arduino to provide real-time temperature and pressure data[cite: 26].</p>
-    </div>
+  <h2>Projects</h2>
+  <div class="grid">
+    <div>Smart Weather Monitoring System</div>
+    <div>Air Gesture Mouse</div>
+    <div>4-bit Up/Down Counter</div>
+    <div>Smart Temperature Sensor</div>
+  </div>
 </section>
 
-<section id="certifications">
-    <h2>Workshops & Certifications</h2>
-    <ul>
-        <li>VLSI Chip Design Workshop - K. Ramakrishna Engineering College [cite: 40]</li>
-        <li>Industrial Training - BSNL Telecom [cite: 41]</li>
-        <li>Digital VLSI Design - NPTEL [cite: 41]</li>
-        <li>MATLAB for Engineers (Signal Processing) [cite: 42, 43]</li>
-    </ul>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: santhoshvijayaragavan07@gmail.com</p>
+  <p>Phone: +91 90431 01809</p>
 </section>
+
+<footer>
+  <p>© 2026 Santhosh V</p>
+</footer>
 
 </body>
 </html>
