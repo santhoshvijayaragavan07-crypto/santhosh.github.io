@@ -1,73 +1,487 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Santhosh V | Portfolio</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Santhosh V | Electronics & Communication Engineer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family: 'Poppins', sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+      line-height: 1.7;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar{
+      width:8px;
+    }
+
+    ::-webkit-scrollbar-thumb{
+      background:#38bdf8;
+      border-radius:10px;
+    }
+
+    header{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:40px;
+      background:
+      linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.9)),
+      url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+    }
+
+    .hero{
+      max-width:900px;
+    }
+
+    .hero h1{
+      font-size:70px;
+      font-weight:700;
+      color:#38bdf8;
+      letter-spacing:2px;
+      margin-bottom:10px;
+    }
+
+    .hero h2{
+      font-size:28px;
+      font-weight:400;
+      color:#cbd5e1;
+      margin-bottom:25px;
+    }
+
+    .hero p{
+      font-size:18px;
+      color:#e2e8f0;
+      margin-bottom:35px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 32px;
+      background:#38bdf8;
+      color:#0f172a;
+      text-decoration:none;
+      font-weight:600;
+      border-radius:40px;
+      transition:0.4s;
+      box-shadow:0 0 20px rgba(56,189,248,0.5);
+    }
+
+    .btn:hover{
+      transform:translateY(-5px);
+      background:#0ea5e9;
+      color:white;
+    }
+
+    section{
+      padding:90px 10%;
+    }
+
+    .section-title{
+      font-size:42px;
+      color:#38bdf8;
+      margin-bottom:50px;
+      text-align:center;
+      position:relative;
+    }
+
+    .section-title::after{
+      content:'';
+      width:120px;
+      height:4px;
+      background:#38bdf8;
+      display:block;
+      margin:15px auto;
+      border-radius:10px;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:30px;
+      border-radius:20px;
+      margin-bottom:30px;
+      transition:0.4s;
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 10px 30px rgba(56,189,248,0.2);
+    }
+
+    .card h3{
+      color:#38bdf8;
+      margin-bottom:15px;
+      font-size:28px;
+    }
+
+    .card p{
+      color:#cbd5e1;
+    }
+
+    .skills{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .skill-box{
+      background:#1e293b;
+      padding:25px;
+      border-radius:18px;
+      transition:0.4s;
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .skill-box:hover{
+      transform:translateY(-6px);
+      box-shadow:0 8px 25px rgba(56,189,248,0.2);
+    }
+
+    .skill-box h4{
+      color:#38bdf8;
+      margin-bottom:12px;
+      font-size:22px;
+    }
+
+    .timeline{
+      border-left:3px solid #38bdf8;
+      padding-left:30px;
+    }
+
+    .timeline-item{
+      margin-bottom:40px;
+      position:relative;
+    }
+
+    .timeline-item::before{
+      content:'';
+      position:absolute;
+      left:-39px;
+      top:5px;
+      width:16px;
+      height:16px;
+      background:#38bdf8;
+      border-radius:50%;
+    }
+
+    .timeline-item h3{
+      color:#38bdf8;
+      margin-bottom:8px;
+    }
+
+    ul{
+      margin-top:10px;
+      padding-left:20px;
+    }
+
+    ul li{
+      margin-bottom:8px;
+      color:#cbd5e1;
+    }
+
+    .contact{
+      text-align:center;
+      background:#020617;
+      border-top:1px solid rgba(255,255,255,0.08);
+    }
+
+    .contact h2{
+      margin-bottom:20px;
+    }
+
+    .contact p{
+      margin-bottom:12px;
+      color:#cbd5e1;
+      font-size:18px;
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      background:#020617;
+      color:#94a3b8;
+      border-top:1px solid rgba(255,255,255,0.08);
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:48px;
+      }
+
+      .hero h2{
+        font-size:22px;
+      }
+
+      .section-title{
+        font-size:34px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <nav>
-    <h1>Santhosh V</h1>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- HERO SECTION -->
+  <header>
+    <div class="hero">
+      <h1>Santhosh V</h1>
+      <h2>Electronics & Communication Engineering Student</h2>
 
-<section class="hero">
-  <div class="hero-text">
-    <h2>ECE Engineer | VLSI | Embedded Systems</h2>
-    <p>Focused on building real hardware solutions, embedded systems, and chip design future.</p>
-    <a href="#projects" class="btn">View Projects</a>
-  </div>
-  <div class="hero-img">
-    <img src="photo.jpg" alt="Santhosh">
-  </div>
-</section>
+      <p>
+        Passionate Electronics Engineering undergraduate specializing in 
+        VLSI Design, Embedded Systems, and Digital Electronics. 
+        Skilled in Verilog HDL, Arduino development, Linux environments, 
+        and hardware simulation tools. Focused on building innovative 
+        real-world engineering solutions through practical projects and 
+        hands-on experimentation.
+      </p>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>3rd Year Electronics & Communication Engineering student passionate about VLSI, Arduino, Embedded Systems and real engineering solutions.</p>
-</section>
+      <a href="#projects" class="btn">Explore My Projects</a>
+    </div>
+  </header>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="grid">
-    <div>Verilog</div>
-    <div>Arduino</div>
-    <div>Python</div>
-    <div>MATLAB</div>
-    <div>ESP8266</div>
-    <div>Linux</div>
-  </div>
-</section>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="grid">
-    <div>Smart Weather Monitoring System</div>
-    <div>Air Gesture Mouse</div>
-    <div>4-bit Up/Down Counter</div>
-    <div>Smart Temperature Sensor</div>
-  </div>
-</section>
+    <div class="card">
+      <h3>Career Objective</h3>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: santhoshvijayaragavan07@gmail.com</p>
-  <p>Phone: +91 90431 01809</p>
-</section>
+      <p>
+        I am currently pursuing B.E. Electronics and Communication Engineering 
+        at Dhanalakshmi Srinivasan Engineering College under Anna University 
+        with a CGPA of 7.69 and zero active backlogs.
+      </p>
 
-<footer>
-  <p>© 2026 Santhosh V</p>
-</footer>
+      <br>
+
+      <p>
+        My core interests lie in VLSI Design, Embedded Systems, 
+        Digital Logic Design, and Hardware Development. I enjoy solving 
+        real engineering problems by combining software logic with hardware 
+        implementation.
+      </p>
+
+      <br>
+
+      <p>
+        I aim to contribute to innovative engineering environments where I can 
+        strengthen my expertise in SoC architecture, HDL coding, microcontroller 
+        systems, and real-time embedded applications.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2 class="section-title">Technical Skills</h2>
+
+    <div class="skills">
+
+      <div class="skill-box">
+        <h4>HDL & Hardware</h4>
+        <p>
+          Verilog HDL, Behavioral Modeling, Structural Modeling, 
+          NI Multisim, Digital Logic Design
+        </p>
+      </div>
+
+      <div class="skill-box">
+        <h4>Programming</h4>
+        <p>
+          C Programming, Python Programming, Arduino Programming
+        </p>
+      </div>
+
+      <div class="skill-box">
+        <h4>Embedded Systems</h4>
+        <p>
+          Arduino Uno, ESP8266, Sensor Integration, 
+          LCD Interfacing, IoT Basics
+        </p>
+      </div>
+
+      <div class="skill-box">
+        <h4>EDA & Tools</h4>
+        <p>
+          MATLAB, Arduino IDE, Linux Ubuntu, 
+          Xilinx ISim, EDA Playground
+        </p>
+      </div>
+
+      <div class="skill-box">
+        <h4>Core Domains</h4>
+        <p>
+          VLSI Design, Analog Circuits, Mixed Signal Circuits, 
+          Embedded Systems, Digital Electronics
+        </p>
+      </div>
+
+      <div class="skill-box">
+        <h4>Networking & OS</h4>
+        <p>
+          Linux Environment, IP Networking, Socket Programming, 
+          Nmap Basics
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="card">
+      <h3>Air Gesture Mouse via IP Control</h3>
+
+      <p>
+        Developed a Linux-based remote mouse control system using Python 
+        socket programming. The project streams motion data from a smartphone 
+        to control the computer cursor in real time over a local network.
+      </p>
+
+      <ul>
+        <li>Implemented socket-based communication architecture</li>
+        <li>Integrated real-time cursor movement with low latency</li>
+        <li>Achieved response time below 100ms</li>
+        <li>Demonstrated in college-level project expo</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Smart Weather Monitoring System</h3>
+
+      <p>
+        Designed an Arduino-based environmental monitoring system capable of 
+        measuring temperature, humidity, and atmospheric pressure continuously.
+      </p>
+
+      <ul>
+        <li>Integrated DHT11 and BMP180 sensors</li>
+        <li>Implemented real-time LCD display output</li>
+        <li>Used Arduino IDE and embedded C programming</li>
+        <li>Maintained sensor accuracy within ±1°C</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>4-Bit Synchronous Up/Down Counter</h3>
+
+      <p>
+        Created a configurable synchronous counter using Verilog HDL 
+        with increment and decrement operational modes.
+      </p>
+
+      <ul>
+        <li>Implemented active-high reset functionality</li>
+        <li>Designed complete behavioral Verilog model</li>
+        <li>Developed testbench for waveform analysis</li>
+        <li>Validated all 16 state transitions successfully</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Smart Temperature Sensor</h3>
+
+      <p>
+        Developed a temperature monitoring system using Arduino and LM35 sensor 
+        with live temperature display on a 16x2 LCD.
+      </p>
+
+      <ul>
+        <li>Converted analog voltage to Celsius values</li>
+        <li>Implemented continuous data refresh</li>
+        <li>Maintained ±0.5°C accuracy during runtime</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <h2 class="section-title">Education</h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <h3>B.E. Electronics & Communication Engineering</h3>
+        <p>
+          Dhanalakshmi Srinivasan Engineering College, Perambalur
+        </p>
+        <p>
+          Anna University | 2023 - 2027
+        </p>
+        <p>
+          CGPA: 7.69 | No Active Backlogs
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <h2 class="section-title">Workshops & Certifications</h2>
+
+    <div class="card">
+      <ul>
+        <li>Digital VLSI Design — NPTEL</li>
+        <li>Introduction to IoT — NPTEL</li>
+        <li>Industrial Training — BSNL Telecom</li>
+        <li>VLSI Chip Design Workshop</li>
+        <li>MATLAB for Engineers</li>
+        <li>Multisim Circuit Simulation</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- INTERESTS -->
+  <section id="interests">
+    <h2 class="section-title">Activities & Interests</h2>
+
+    <div class="card">
+      <ul>
+        <li>Active participant in project expos and hackathons</li>
+        <li>Building embedded and hardware prototypes</li>
+        <li>Tinkering with electronic gadgets</li>
+        <li>Drawing and sketching</li>
+        <li>Reading books and exploring technology trends</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <h2 class="section-title">Contact</h2>
+
+    <p><strong>Email:</strong> santhoshvijayaragavan07@gmail.com</p>
+    <p><strong>Phone:</strong> +91 90431 01809</p>
+    <p><strong>LinkedIn:</strong> linkedin.com/in/santhosh0706</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Santhosh V | Electronics & Communication Engineering Portfolio</p>
+  </footer>
 
 </body>
 </html>
